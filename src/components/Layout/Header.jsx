@@ -32,7 +32,7 @@ const Header = () => {
             placeholder="Search..."
           />
         </div>
-        <button>ChartButton</button>
+        <CartButton/>
       </header>
       <HeaderImageContainer>
         <img
