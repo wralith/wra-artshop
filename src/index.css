@@ -3,6 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .card {
+    @apply p-4 shadow-md shadow-gray-400 rounded-xl bg-white;
+  }
+}
+
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;

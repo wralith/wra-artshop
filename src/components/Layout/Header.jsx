@@ -3,17 +3,16 @@ import styled from "styled-components";
 import { CartButton } from "./CartButton";
 
 const HeaderImageContainer = styled.div`
-  /* position: absolute; */
   width: 100%;
   height: 12rem;
   z-index: 0;
   overflow: hidden;
 
   & img {
-    width: 110%;
     height: 100%;
     object-fit: cover;
-    transform: rotateZ(2deg) translateY(-4rem) translateX(-1rem);
+    width: 110%;
+    transform: rotateZ(3deg) translateY(-4rem) translateX(-1rem);
   }
 `;
 
@@ -21,10 +20,10 @@ const Header = () => {
   return (
     <>
       <header className="z-50 flex justify-around bg-gray-700 p-3  text-white shadow-md">
-        <h3 className="text-xl hover:text-gray-300">
+        <h3 className="flex items-center text-xl hover:text-gray-300">
           <a href="#">Wrart Shop</a>
         </h3>
-        <div className="flex gap-2 rounded-md bg-gray-800 p-1 hover:bg-gray-600">
+        <div className="flex items-center gap-2 rounded-md bg-gray-800 p-1 hover:bg-gray-600">
           <label htmlFor="search">🔍</label>
           <input
             className="bg-transparent outline-none"
@@ -32,7 +31,7 @@ const Header = () => {
             placeholder="Search..."
           />
         </div>
-        <CartButton/>
+        <CartButton />
       </header>
       <HeaderImageContainer>
         <img
