@@ -1,6 +1,7 @@
 import React from "react";
 import backOfAWoman from "../../assets/images/back-of-a-woman.jpg";
 import flowerCat from "../../assets/images/flower-cat.jpg";
+import ArtItem from "./ArtItem/ArtItem";
 
 const STATIC_ARTS = [
   {
@@ -13,16 +14,18 @@ const STATIC_ARTS = [
     id: "a2",
     name: "Flower Cat",
     imageURL: flowerCat,
-    price: 45.5,
+    price: 25.5,
   },
 ];
 
 const AvailableArts = () => {
   const artList = STATIC_ARTS.map((art) => (
-    <li className="card flex flex-col gap-5">
-      <span>{art.name}</span>
-      <img src={art.imageURL} alt="art-img" width={300} />
-    </li>
+    <ArtItem
+      key={art.id}
+      name={art.name}
+      imgURL={art.imageURL}
+      price={art.price}
+    />
   ));
 
   return (
