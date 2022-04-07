@@ -12,7 +12,7 @@ const HeaderImageContainer = styled.div`
     height: 100%;
     object-fit: cover;
     width: 110%;
-    transform: rotateZ(3deg) translateY(-4rem) translateX(-1rem);
+    transform: translateY(-4rem);
   }
 `;
 

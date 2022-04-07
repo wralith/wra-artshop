@@ -22,6 +22,7 @@ const AvailableArts = () => {
   const artList = STATIC_ARTS.map((art) => (
     <ArtItem
       key={art.id}
+      id={art.id}
       name={art.name}
       imgURL={art.imageURL}
       price={art.price}

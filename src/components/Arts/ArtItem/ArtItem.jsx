@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import ArtItemForm from "./ArtItemForm";
+import CartContext from "../../../store/cart-context";
 
 const ArtItem = (props) => {
+  const cartCtx = useContext(CartContext);
   const price = `$${props.price.toFixed(2)}`;
+
+  const handleAddToCart = (amount) => {
+    cartCtx.addItem({
+      id: props.id,
+      name: props.name,
+      amount: amount,
+      price: props.price,
+    });
+  };
 
   //TODO Increase scale on hover
   return (
@@ -12,12 +23,17 @@ const ArtItem = (props) => {
           {props.name}
         </h3>
         <div>
-          <img className='rounded-md border-gray-800 border-2' src={props.imgURL} alt="art-img" width={200} />
+          <img
+            className="rounded-md border-2 border-gray-800"
+            src={props.imgURL}
+            alt="art-img"
+            width={200}
+          />
         </div>
       </div>
       <div className="mt-5 flex justify-around">
         <div className="flex items-center">{price}</div>
-        <ArtItemForm />
+        <ArtItemForm onAddToCart={handleAddToCart} />
       </div>
     </li>
   );

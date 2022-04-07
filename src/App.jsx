@@ -2,27 +2,30 @@ import "./App.css";
 import Arts from "./components/Arts/Arts";
 import Header from "./components/Layout/Header";
 import Cart from "./components/Cart/Cart";
-import { useState } from 'react'
+import { useState } from "react";
+import CartProvider from "./store/CartProvider";
 
 function App() {
-  const [cartIsShown, setCartIsShown] = useState(false)
+  const [cartIsShown, setCartIsShown] = useState(false);
 
   const showCartHandler = () => {
-    setCartIsShown(true)
-  }
+    setCartIsShown(true);
+  };
 
   const hideCartHandler = () => {
-    setCartIsShown(false)
-  }
+    setCartIsShown(false);
+  };
 
   return (
-    <div className="App bg-gray-900 min-h-screen">
-      {cartIsShown && <Cart onClose={hideCartHandler} />}
-      <Header onShowCart={showCartHandler} />
-      <main>
-        <Arts/>
-      </main>
-    </div>
+    <CartProvider>
+    <div className="App min-h-screen bg-gray-900">
+        {cartIsShown && <Cart onClose={hideCartHandler} />}
+        <Header onShowCart={showCartHandler} />
+        <main>
+          <Arts />
+        </main>
+      </div>
+      </CartProvider>
   );
 }
 
