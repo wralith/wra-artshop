@@ -3,9 +3,9 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 
 //TODO Display only icon and popover when hover
 
-export const CartButton = () => {
+export const CartButton = (props) => {
   return (
-    <button className="bg-gray-800 rounded-full p-2 hover:animate-pulse flex flex-row items-center gap-2">
+    <button onClick={props.onClick} className="bg-gray-800 rounded-full p-2 hover:animate-pulse flex flex-row items-center gap-2">
       <span className="text-3xl mx-2">
         <HiOutlineShoppingCart />
       </span>

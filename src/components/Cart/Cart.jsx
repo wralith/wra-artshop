@@ -10,7 +10,7 @@ const Cart = (props) => {
   );
 
   return (
-    <Modal>
+    <Modal onClose={props.onClose}>
       <div className="flex flex-col gap-12 mx-2">
         {cartItems}
         <div className="flex justify-between">
@@ -18,8 +18,8 @@ const Cart = (props) => {
           <span className="font-bold text-3xl">45.56</span>
         </div>
         <div className="flex justify-end gap-5">
-          <button>Close</button>
-          <button>Buy</button>
+          <button onClick={props.onClose} className="btn-cancel">Close</button>
+          <button className="btn-primary">Buy</button>
         </div>
       </div>
     </Modal>

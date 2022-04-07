@@ -16,7 +16,7 @@ const HeaderImageContainer = styled.div`
   }
 `;
 
-const Header = () => {
+const Header = (props) => {
   return (
     <>
       <header className="z-50 flex justify-around bg-gray-700 p-3  text-white shadow-md">
@@ -31,7 +31,7 @@ const Header = () => {
             placeholder="Search..."
           />
         </div>
-        <CartButton />
+        <CartButton onClick={props.onShowCart} />
       </header>
       <HeaderImageContainer>
         <img
