@@ -30,7 +30,7 @@ const AvailableArts = () => {
 
   return (
     <section>
-      <ul className="m-3 flex gap-5 ">{artList}</ul>
+      <ul className="m-3 flex gap-3 ">{artList}</ul>
     </section>
   );
 };

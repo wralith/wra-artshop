@@ -10,7 +10,7 @@ const ArtItemForm = () => {
   };
 
   return (
-    <form className="mt-5 flex flex-row items-center justify-end gap-2">
+    <form className="flex flex-row items-center justify-end gap-2">
       {/* <label htmlFor={props.item.id}></label> */}
       {/* <input id={props} className='flex'/> */}
       <p className="bg-orange-400 text-white rounded-full w-7 h-7 flex justify-center items-center">{amount}</p>
