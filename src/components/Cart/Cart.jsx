@@ -9,8 +9,12 @@ const Cart = (props) => {
   const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
   const hasItems = cartCtx.items.length > 0;
 
-  const handleCartItemRemove = (id) => {};
-  const handleCartItemAdd = (item) => {};
+  const handleCartItemRemove = (id) => {
+    cartCtx.removeItem(id)
+  };
+  const handleCartItemAdd = (item) => {
+    cartCtx.addItem({...item, amount:1})
+  };
 
   const cartItems = (
     <ul className="flex flex-col gap-3 max-h-[20rem] overflow-scroll">
