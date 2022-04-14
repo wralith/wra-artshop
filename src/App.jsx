@@ -18,7 +18,7 @@ function App() {
 
   return (
     <CartProvider>
-    <div className="App min-h-screen bg-gray-900">
+    <div className="App min-h-screen bg-gray-900 items-center">
         {cartIsShown && <Cart onClose={hideCartHandler} />}
         <Header onShowCart={showCartHandler} />
         <main>

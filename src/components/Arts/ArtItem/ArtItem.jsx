@@ -23,12 +23,9 @@ const ArtItem = (props) => {
           {props.name}
         </h3>
         <div>
-          <img
-            className="rounded-md border-2 border-gray-800"
-            src={props.imgURL}
-            alt="art-img"
-            width={200}
-          />
+          <p
+            className="rounded-md border-gray-800"
+          >{props.description}</p>
         </div>
       </div>
       <div className="mt-5 flex justify-around">
